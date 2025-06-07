@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
- 
 
 async function loadTop20Rapid () {
   try {

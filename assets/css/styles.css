@@ -1,10 +1,8 @@
-/* ===== Reset & base ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { font-family: system-ui, Helvetica, Arial, sans-serif; background: #f9fafb; color: #1f2937; }
 a { color: inherit; text-decoration: none; }
 
-/* ===== Hero (index) ===== */
 .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at top, #6366f1 10%, #4338ca 60%, #1e1b4b 100%); color: #fff; text-align: center; padding: 4rem 1rem; }
 .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 0.5em; }
 .hero-content p { font-size: 1.15rem; opacity: 0.9; }
@@ -12,30 +10,53 @@ a { color: inherit; text-decoration: none; }
 .btn { background: #d946ef; padding: 0.75rem 1.75rem; border-radius: 9999px; font-weight: 600; transition: transform .2s, filter .3s; }
 .btn:hover { transform: scale(1.06); filter: brightness(1.1); }
 
-/* ===== Sub‑hero (sub‑páginas) ===== */
 .sub-hero { background: #e0e7ff; color: #1e3a8a; padding: 2.5rem 1rem; text-align: center; }
 .sub-hero h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-top: 0.5rem; }
 .back { font-weight: 600; display: inline-block; margin-bottom: 0.5rem; }
 
-/* ===== Álbum grid ===== */
 .album { width: 100%; max-width: 1440px; margin: auto; padding: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
 
-/* ===== Card ===== */
 .card { position: relative; padding: 1rem; border-radius: 1.5rem; overflow: hidden; cursor: pointer; transition: transform .25s ease, box-shadow .25s ease; background: var(--bg, linear-gradient(135deg, #fde68a, #fca5a5)); isolation: isolate; }
 .card img { width: 100%; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,.6); }
 .card figcaption { margin-top: 1rem; display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
 .card .name { font-weight: 700; text-align: center; }
 .card .rating { font-size: 0.875rem; opacity: 0.75; }
 
-/* Hover & active */
 .card:hover { transform: scale(1.08); box-shadow: 0 0 0 4px #fff, 0 8px 20px rgba(0,0,0,.15); z-index: 2; }
 .card.active { transform: scale(1.1) rotate(-.5deg); box-shadow: 0 0 0 6px #fff, 0 12px 28px rgba(0,0,0,.2); z-index: 3; }
 
-/* Color cycle via nth-child */
 .card:nth-child(4n+1) { --bg: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%); }
 .card:nth-child(4n+2) { --bg: linear-gradient(135deg, #fecaca 0%, #fda4af 100%); }
 .card:nth-child(4n+3) { --bg: linear-gradient(135deg, #bbf7d0 0%, #6ee7b7 100%); }
 .card:nth-child(4n+4) { --bg: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%); }
 
-/* Responsivo */
 @media (max-width: 480px) { .album { padding: 1rem; } .card { padding: 0.75rem; } }
+
+/* nova atualização de estilo para o footer */
+
+.footer {
+  background-color: #222;
+  color: #eee;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 2px solid #444;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.footer a {
+  color: #61dafb;       
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: #21a1f1;
+  text-decoration: underline;
+}
