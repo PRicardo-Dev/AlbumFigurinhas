@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calendário F1 2025</title>
+</head>
+<body>
+  <h1>Calendário da Fórmula 1 - 2025</h1>
+  <ul id="race-list"></ul>
+
+  <script>
+    const listEl = document.getElementById('race-list');
+
+    // URL da API pública da F1
+    const apiUrl = 'https://ergast.com/api/f1/2025.json';
+
+    // Buscar e exibir o calendário
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const races = data.MRData.RaceTable.Races;
+        races.forEach(race => {
+          const li = document.createElement('li');
+          li.textContent = `${race.raceName} - ${race.Circuit.circuitName} (${race.date})`;
+          listEl.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error('Erro ao buscar o calendário:', error);
+        listEl.textContent = 'Erro ao carregar o calendário.';
+      });
+  </script>
+</body>
+</html>
