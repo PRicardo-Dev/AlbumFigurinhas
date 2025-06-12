@@ -32,9 +32,8 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 480px) { .album { padding: 1rem; } .card { padding: 0.75rem; } }
 
-/* nova atualização de estilo para o footer */
-
 .footer {
+  display: flex;
   background-color: #222;
   color: #eee;
   text-align: center;
@@ -59,4 +58,4 @@ a { color: inherit; text-decoration: none; }
 .footer a:focus {
   color: #21a1f1;
   text-decoration: underline;
-}
+} 
